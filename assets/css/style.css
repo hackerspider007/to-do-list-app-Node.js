@@ -1,0 +1,154 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  background-image: url(https://img.wallpapersafari.com/desktop/1600/900/40/8/ITPmUb.jpg);
+ 
+}
+
+#heading {
+  margin-top: 5vh;
+  font-family: "Tangerine", serif;
+  font-weight: bold;
+  font-size: 68px;
+  text-shadow: 14px 4px 4px #aaa;
+  text-align: center;
+}
+
+#remove-textArea-styling {
+  border: none;
+  overflow: auto;
+  outline: none;
+  resize: none;
+  margin-top: -10px;
+  padding-top: 0;
+  width: 98%;
+  margin-bottom: 40px;
+  background: transparent;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding-top: 10px;
+}
+
+#align-dropdown {
+  outline: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 45px;
+  background: transparent;
+}
+
+#align-date {
+  margin-top: -40px;
+    width: 50vw;
+}
+
+.remove-styling {
+  border: none;
+  background: transparent;
+}
+
+#display-flex {
+  padding-top: 0;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 135%;
+}
+
+#styleAddBtn {
+  height: 45px;
+  width: 150px;
+  color: white;
+  background-color: rgb(51, 50, 50);
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+#styleDeleteBtn {
+  height: 45px;
+  width: 150px;
+  color: white;
+  background-color: red;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-top: 18px;
+  margin-right: -183px;
+
+}
+
+.display-flex {
+  padding-top: 0;
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 203.2%;
+}
+
+.m-left-bottom {
+  margin-left: 47px;
+  margin-bottom: 25px;
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+.margin-left {
+  display: inline;
+  margin-left: 23px;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* width: 60%; */
+}
+
+.resize-button {
+  border: none;
+  width: 90px;
+  height: 36px;
+  background-color: rgb(185, 204, 218);
+  border-radius: 5px;
+  margin-right: 70px;
+}
+
+.padding-left {
+
+  padding-left: 20px;
+  width: 100%;
+}
+
+#category select {
+  width: 85% ;
+
+}
+
+#date-td input {
+
+  width: 85%;
+}
+
+.add-btn{
+  margin-left: 240px;
+}
+
+#date-td{
+  padding-left:20px;
+}
+
+#category{
+  padding-left:20px;
+}
+
+.icon-margin{
+  margin-right: 7px;
+}

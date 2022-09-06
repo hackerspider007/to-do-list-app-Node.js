@@ -1,0 +1,136 @@
+<html>
+
+  <head>
+
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"> 
+  </head>
+
+  <body>
+
+        <div id="heading">
+            <%= title %>
+        </div>
+
+
+    <table>
+      <!-- We can only use HTML form tag here because only HTML form is used to collect user input.
+         The user input is most often sent to a server for processing. -->
+   <form action="/create-task" method="POST">
+      <tr>
+        <td colspan="2" class="padding-left">
+
+          <h3> DESCRIPTION </h3>
+
+          <textarea name="description" placeholder="What do you need to do?" id="remove-textArea-styling" rows="3" cols="10" required></textarea>
+   
+
+        </td>
+
+      </tr> 
+
+        <tr id="date-cat">
+
+<!--  class="padding-left" -->
+          <td id="category">
+
+            <h3 > CATEGORY </h3>
+
+            <!-- creating a drop down form -->
+            <!-- The name attribute specifies the name of an <input> element.
+            The name attribute is used to reference elements in a JavaScript, or to reference 
+            form data after a form is submitted.
+            Note: Only form elements with a name attribute will have their values passed
+            when submitting a form.
+          The name attribute defines a name of the element.
+           It is used in the HTTP request that is sent to the server as a variable name by the browser.
+            This attribute is associated with the data within the element. -->
+                <select name="typeOfTask" id="align-dropdown" required>
+                <option disabled selected>Choose a category</option>
+                <option>School</option>
+                <option>Work</option>
+                <option>Home</option>
+                <option>Extra</option>
+                </select>
+
+          </td>
+<!-- class="padding-left" -->
+          <td id="date-td">
+
+              <h3 id="align-date">DUE DATE</h3>
+
+                <!-- adding date and time  -->
+                  <input type="date" id="select-date" name="date" required class="remove-styling">
+
+          </td>
+
+      </tr>
+
+        <tr class="hide-border">
+          <td class="padding-left">
+              <!-- cerate buttons add task and delete task -->
+            <div id="display-flex">
+
+                <span class="add-btn">
+
+                    <!-- <input type="submit" id="styleAddBtn" value="Add Task">  -->
+                    <button type="submit" id="styleAddBtn" value="Add Task">
+                      <i class="fa-solid fa-plus icon-margin"></i> 
+                      add task
+                    </button>
+
+                </span>
+
+  </form>
+
+            <form action="/delete-task" method="GET">
+
+                    <span>
+
+                        <button type="submit"  id="styleDeleteBtn" >
+                          <i class="fa-solid fa-trash-can icon-margin"></i>
+                          Delete Task 
+                        </button>
+
+                    </span>
+
+           </div> 
+         </td>
+        </tr>
+         <% for(let i=0;i <taskList.length ;i++) { %>
+ 
+          <tr>
+                <td class="display-flex">
+    
+                <span class="padding-left">
+                  <input type="checkbox" class="checkBoxx" name="<%= taskList[i]._id %>">
+                  <div class="margin-left"> <%= taskList[i].description %>  </div>
+              
+                    <p class="m-left-bottom">
+                      
+                      <i class="fa-regular fa-calendar-days padding-right"></i>
+                      <%= taskList[i].date %>
+    
+                    </p>
+             
+                </span>
+                    <button class="resize-button"> <%= taskList[i].typeOfTask %> </button>
+                 </td>
+          </tr>
+        
+            <% } %>
+          </form>
+
+ 
+    </table>
+
+
+  <script src="javascript/script.js"> </script>
+
+  </body>
+
+</html>
