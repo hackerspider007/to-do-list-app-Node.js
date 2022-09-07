@@ -23,8 +23,6 @@ app.use('/',express.urlencoded({ extended: true }) );
 
 app.get("/", function (req, res) {
 
-  console.log("inside get method");
-
   Task.find({}, function (err, tasks) {
 
     if (err) {
